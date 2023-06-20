@@ -57,8 +57,7 @@ export default countriesSlice.reducer;
 
 // actions 
 export const getCountries = () => (dispatch) => {
-    const endpoint = 'http://localhost:3001/countries';
-    axios.get(endpoint)
+    axios.get('/countries')
         .then((res) => {
             dispatch(setCountries(res.data))
         })
@@ -66,8 +65,7 @@ export const getCountries = () => (dispatch) => {
 }
 
 export const getCountriesByName = (name) => (dispatch) => {
-    const endpoint = `http://localhost:3001/countries?name=${name}`;
-    axios.get(endpoint)
+    axios.get(`/countries?name=${name}`)
         .then((res) => {
             dispatch(setCountriesByName(res.data))
         })
@@ -75,8 +73,7 @@ export const getCountriesByName = (name) => (dispatch) => {
 }
 
 export const getCountriesById = (id) => (dispatch) => {
-    const endpoint = `http://localhost:3001/countries/${id}`;
-    axios.get(endpoint)
+    axios.get(`/countries/${id}`)
         .then((res) => {
             dispatch(setCountriesById(res.data))
         })

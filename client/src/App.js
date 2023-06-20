@@ -7,6 +7,8 @@ import Landing from './components/Landing/Landing';
 import NavBar from './components/NavBar/NavBar';
 import Activity from './components/Activity/Activity';
 import NotFound from './components/NotFound/NotFound';
+import axios from "axios"
+axios.defaults.baseURL = "http://localhost:3001/"
 
 function App() {
     const { pathname } = useLocation();

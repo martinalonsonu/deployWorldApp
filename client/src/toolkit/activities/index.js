@@ -48,8 +48,7 @@ export const { createActivities, getActivities, updateActivities, deleteActiviti
 export default activitiesSlice.reducer;
 
 export const createActivity = (activity) => (dispatch) => {
-    const endpoint = 'http://localhost:3001/activities';
-    axios.post(endpoint, activity)
+    axios.post('/activities', activity)
         .then((res) => {
             dispatch(createActivities(res.data))
         })
@@ -57,8 +56,7 @@ export const createActivity = (activity) => (dispatch) => {
 }
 
 export const getActivity = () => (dispatch) => {
-    const endpoint = 'http://localhost:3001/activities';
-    axios.get(endpoint)
+    axios.get('/activities')
         .then((res) => {
             dispatch(getActivities(res.data))
         })
@@ -66,8 +64,7 @@ export const getActivity = () => (dispatch) => {
 }
 
 export const updateActivity = (activity, id) => (dispatch) => {
-    const endpoint = `http://localhost:3001/activities/${id}`
-    axios.put(endpoint, activity)
+    axios.put(`/activities/${id}`, activity)
         .then((res) => {
             dispatch(updateActivities(res.data, id))
         })
@@ -75,8 +72,7 @@ export const updateActivity = (activity, id) => (dispatch) => {
 }
 
 export const deleteActivity = (id) => (dispatch) => {
-    const endpoint = `http://localhost:3001/activities/${id}`;
-    axios.delete(endpoint)
+    axios.delete(`/activities/${id}`)
         .then((res) => {
             dispatch(deleteActivities(id));
         })
