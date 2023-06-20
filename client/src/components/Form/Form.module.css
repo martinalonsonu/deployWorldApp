@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 90px auto 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    background-color: rgba(244, 221, 180, 0.7);
+    padding: 20px;
+    border: 2px solid #4a2512;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+.form p {
+    font-family: 'Comfortaa', cursive;
+}
+
+.form input {
+    background-color: azure;
+    font-family: 'Comfortaa', cursive;
+    font-style: normal;
+}
+
+.form .selectSeason {
+    padding: 15px;
+    border: 1px solid #4a2512;
+    border-radius: 15px;
+    background-color: #f7d590;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+}
+
+.form .moreCountry {
+    margin-top: -15px;
+}
+
+.selectCountry {
+    width: 115%;
+    padding: 8px;
+    border: 1px solid #4a2512;
+    border-radius: 15px;
+    background-color: #f7d590;
+    cursor: pointer;
+}
+
+.selectCountry option {
+    background-color: #ffe5b0;
+    font-family: 'Comfortaa', cursive;
+    font-size: larger;
+}
+
+.renderCountriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.countriesSelected {
+    display: flex;
+    align-items: center;
+    background-color: #f1ae2b;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.countriesSelected button {
+    background-color: #4a2512;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5 ease;
+    margin: 5px;
+}
+
+.countriesSelected p {
+    font-size: small;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin: auto;
+}
+
+.form .button {
+    margin-top: 5%;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #f1ae2b;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5 ease;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form .disabled {
+    margin-top: 5%;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(179, 179, 179);
+    color: rgb(76, 76, 76);
+    border: none;
+    cursor: not-allowed;
+    transition: none;
+    font-family: 'Comfortaa', cursive;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.form .errorMessage {
+    font-family: 'IBM Plex Mono', monospace;
+    color: red;
+    font-weight: 600;
+    font-size: small;
+}
+
+
+.form .button:hover {
+    transform: scale(1.2);
+}
+
+.countriesSelected button:hover {
+    transform: scale(1.2);
+}
