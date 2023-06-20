@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import Activity from './components/Activity/Activity';
 import NotFound from './components/NotFound/NotFound';
 import axios from "axios"
-axios.defaults.baseURL = 'http://lodeployworldapp-production.up.railway.appcalhost:3001'
+axios.defaults.baseURL = 'https://deployworldapp-production.up.railway.app/'
 
 function App() {
     const { pathname } = useLocation();
