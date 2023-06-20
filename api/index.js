@@ -20,6 +20,7 @@
 const server = require('./src/app.js');
 const { dataApi } = require('./src/controllers/controller.js');
 const { conn } = require('./src/db.js');
+require('dotenv').config();
 
 // Syncing all the models at once.
 conn.sync({ force: false })
@@ -27,8 +28,8 @@ conn.sync({ force: false })
         try {
             await dataApi();
             console.log('Base de datos cargada correctamente');
-            server.listen(3001, () => {
-                console.log('Server up on port 3001'); // eslint-disable-line no-console
+            server.listen(process.env.PORT, () => {
+                console.log('Server up on port', process.env.PORT); // eslint-disable-line no-console
             });
         } catch (error) {
             console.error('Error al sincronizar los modelos:', error);
