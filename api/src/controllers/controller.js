@@ -17,6 +17,7 @@ const dataApi = async () => {
             population: element.population
         }));
         await Country.bulkCreate(countries)
+        console.log(data)
         console.log('Datos de la API guardados correctamente')
     } catch (error) {
         return { error: error.message };
