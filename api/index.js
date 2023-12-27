@@ -23,7 +23,7 @@ const { conn } = require('./src/db.js');
 require('dotenv').config();
 
 // Syncing all the models at once.
-conn.sync({ force: false })
+conn.sync({ force: true })
     .then(async () => {
         try {
             await dataApi();
